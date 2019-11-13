@@ -1,18 +1,20 @@
-package third;
+package basic;
+
+import java.util.Arrays;
 
 /**
  * @Author AceDJH
  * @Date 2019/11/12 16:18
  */
 public class ArrayTest {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         final int NMAX = 10;
         int[][] odds = new int[NMAX + 1][];
         for (int n = 0; n <= NMAX; n++)
             odds[n] = new int[n + 1];
 
-        for (int n = 0; n < odds.length; n++){
-            for (int k = 0; k < odds[n].length; k++){
+        for (int n = 0; n < odds.length; n++) {
+            for (int k = 0; k < odds[n].length; k++) {
                 int lotteryOdds = 1;
                 for (int i = 1; i <= k; i++)
                     lotteryOdds = lotteryOdds * (n - i + 1) / i;
@@ -21,12 +23,16 @@ public class ArrayTest {
             }
         }
 
-        for (int[] row : odds){
-            for (int odd: row){
+
+
+        for (int[] row : odds) {
+            for (int odd : row) {
                 System.out.printf("%4d", odd);
             }
             System.out.println();
         }
 
+//        二元数组遍历
+        System.out.println(Arrays.deepToString(odds));
     }
 }
