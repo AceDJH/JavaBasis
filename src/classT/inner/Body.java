@@ -1,5 +1,7 @@
 package classT.inner;
 
+import java.util.Objects;
+
 /**
  * @Author AceDJH
  * @Date 2019/11/14 21:22
@@ -26,6 +28,20 @@ public class Body {//外部类
     public void methodBody(){
         System.out.println("外部类的方法");
         new Heart().beat();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Body body = (Body) o;
+        return num == body.num &&
+                Objects.equals(name, body.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, num);
     }
 
     public String getName() {
