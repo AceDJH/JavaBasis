@@ -5,6 +5,7 @@ import java.util.ArrayList;
 /**
  * @Author AceDJH
  * @Date 2019/11/13 21:43
+ * 发红包
  */
 public class MainRedPacket {
     public static void main(String[] args) {

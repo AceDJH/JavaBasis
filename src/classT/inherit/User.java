@@ -1,5 +1,7 @@
 package classT.inherit;
 
+import java.util.Objects;
+
 /**
  * @Author AceDJH
  * @Date 2019/11/13 21:28
@@ -36,5 +38,19 @@ public class User {
                 ", leftmoney=" + leftmoney +
                 '}');
         return null;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return Double.compare(user.leftmoney, leftmoney) == 0 &&
+                Objects.equals(username, user.username);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(username, leftmoney);
     }
 }
