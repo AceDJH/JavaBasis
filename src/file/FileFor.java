@@ -11,6 +11,7 @@ public class FileFor {
     public static void main(String[] args) {
         show01();
         show02();
+        System.out.println((char)100);
     }
 
     private static void show01(){
@@ -19,6 +20,7 @@ public class FileFor {
         for (String string : strings) {
             System.out.println(string);
         }
+        System.out.println("----------------------");
     }
 
     private static void show02(){
@@ -27,5 +29,6 @@ public class FileFor {
         for (File file1 : files) {
             System.out.println(file1);
         }
+        System.out.println("----------------------");
     }
 }
