@@ -32,8 +32,8 @@ public class PersonDemo {
 
         Constructor constructor = constructors[0];
         Object object = constructor.newInstance();
-        Person person1 = (Person) object;
-        person1.eat();
+        /*Person person1 = (Person) object;
+        person1.eat();*/
 
         // 体验多态
         System.out.println(object.toString());
