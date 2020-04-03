@@ -8,6 +8,12 @@ import java.lang.management.ThreadMXBean;
  * @Author AceDJH
  * @Date 2020/4/3 16:54
  * Java 程序天生就是多线程程序，可以通过 JMX 来看一下一个普通的 Java 程序有哪些线程
+ * [5] Attach Listener //添加事件
+ * [4] Signal Dispatcher // 分发处理给 JVM 信号的线程
+ * [3] Finalizer //调用对象 finalize 方法的线程
+ * [2] Reference Handler //清除 reference 线程
+ * [1] main //main 线程,程序入口
+ * 从上面的输出内容可以看出：**一个 Java 程序的运行是 main 线程和多个其他线程同时运行**。
  */
 public class MultiThread {
     public static void main(String[] args) {
